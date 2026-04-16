@@ -1,0 +1,11 @@
+
+#C
+C_ORANGE = (255, 128, 0)
+C_WHITE = (255, 255, 255)
+C_GREEN = (0, 128, 0)
+
+
+
+#W
+WIN_WIDTH = 548
+WIN_HEIGHT = 483
