@@ -4,7 +4,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code import WIN_WIDTH, C_ORANGE
+from code.Const import WIN_WIDTH, C_ORANGE
 
 
 class Menu:

@@ -14,3 +14,7 @@ class Entity(ABC):
     @abstractmethod
     def move(self):
         pass
+
+    def draw(self, window):
+        if self.surf and self.rect:
+            window.blit(self.surf, self.rect)

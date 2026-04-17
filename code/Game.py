@@ -1,8 +1,8 @@
 import pygame
 
-from code import WIN_WIDTH, WIN_HEIGHT
-from code import Level
-from code import Menu
+from code.Const import WIN_WIDTH, WIN_HEIGHT
+from code.Level import Level
+from code.Menu import Menu
 
 
 class Game:
@@ -21,9 +21,9 @@ class Game:
 
             elif self.state == 'playing':
                 if self.level is None:
-                    self.level = Level(self.window)
+                    self.level = Level(self.window, 'level')
 
-                self.state = self.level.run
+                self.state = self.level.run()
 
             elif self.state == 'quit':
                 return False
