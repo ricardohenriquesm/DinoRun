@@ -4,6 +4,7 @@ from abc import abstractmethod
 
 from code.Background import Background
 from code.Snake import Snake
+from code.Food import Food
 
 
 class EntityFactory:
@@ -18,3 +19,6 @@ class EntityFactory:
 
             case 'snake':
                 return Snake('snake', position=(1, 1))
+
+            case 'apple':
+                return Food('apple', position=(0, 0))  # Posição inicial qualquer, vai ser redefinida pelo spawn()

@@ -6,7 +6,14 @@ class Snake(Entity):
     def __init__(self, name: str, position: tuple):
         self.name = name
         self.position = position
-        self.body = [(5, 5), (4, 5), (3, 5)]
+        self.body = [
+            (8, 5),
+            (7, 5),
+            (6, 5),
+            (5, 5),
+            (4, 5),
+            (3, 5)
+            ]
         self.direction = "RIGHT"
         self.grow = False
 
@@ -52,6 +59,16 @@ class Snake(Entity):
             self.body.pop()
         else:
             self.grow = False
+
+    def check_self_collision(self):
+        """Verifica se a cabeça colidiu com o próprio corpo"""
+        head = self.body[0]
+        return head in self.body[1:]  # Verifica se a cabeça está em qualquer parte do corpo
+
+    def check_wall_collision(self, grid_width, grid_height):
+        """Verifica se a cobra bateu na parede"""
+        head_x, head_y = self.body[0]
+        return head_x < 0 or head_x >= grid_width or head_y < 0 or head_y >= grid_height
 
     def draw(self, window):
         for i in range(len(self.body)):
