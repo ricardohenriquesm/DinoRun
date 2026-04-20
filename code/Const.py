@@ -1,4 +1,3 @@
-import pygame
 
 #C
 C_ORANGE = (255, 128, 0)
@@ -6,10 +5,16 @@ C_WHITE = (255, 255, 255)
 C_GREEN = (0, 128, 0)
 
 #E
-EVENT_APPLE = pygame.USEREVENT
 
 #S
-SPAWN_TIME = 2000
+SNAKE_BODY = [
+            (8, 5),
+            (7, 5),
+            (6, 5),
+            (5, 5),
+            (4, 5),
+            (3, 5)
+            ]
 
 #W
 WIN_WIDTH = 548

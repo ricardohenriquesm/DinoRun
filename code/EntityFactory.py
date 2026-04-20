@@ -21,4 +21,4 @@ class EntityFactory:
                 return Snake('snake', position=(1, 1))
 
             case 'apple':
-                return Food('apple', position=(0, 0))  # Posição inicial qualquer, vai ser redefinida pelo spawn()
+                return Food('apple', position=(0, 0))
