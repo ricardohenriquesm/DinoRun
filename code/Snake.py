@@ -1,6 +1,5 @@
 import pygame
 
-from code.Const import SNAKE_BODY
 from code.Entity import Entity
 
 
@@ -8,7 +7,14 @@ class Snake(Entity):
     def __init__(self, name: str, position: tuple):
         self.name = name
         self.position = position
-        self.body = SNAKE_BODY
+        self.body = [
+            (8, 5),
+            (7, 5),
+            (6, 5),
+            (5, 5),
+            (4, 5),
+            (3, 5)
+            ]
         self.direction = "RIGHT"
         self.grow = False
 
