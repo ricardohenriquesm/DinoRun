@@ -22,7 +22,6 @@ class Level:
         self.total_cells = self.grid_width * self.grid_height
         self.victory_threshold = self.total_cells * 0.5  # precisa ocupar 50% pra ganhar
 
-        # cria a maca
         self.apple = EntityFactory.get_entity('apple')
         self.apple.spawn(self.grid_width, self.grid_height, self.snake.body)
         self.entity_list.append(self.apple)
@@ -52,7 +51,6 @@ class Level:
         return head_rect.colliderect(apple_rect)
 
     def ganhou(self):
-        # ve se a cobra ocupou metade do mapa
         tamanho = len(self.snake.body)
         if tamanho >= self.victory_threshold:
             return True

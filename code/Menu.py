@@ -20,11 +20,10 @@ class Menu:
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
 
-            # titulo
+
             self.menu_text(50, text="SNAKE", text_color=C_ORANGE, text_center_pos=((WIN_WIDTH / 2), 70))
             self.menu_text(50, text="GAME", text_color=C_ORANGE, text_center_pos=((WIN_WIDTH / 2), 120))
 
-            # botao play
             self.menu_text(20, text="PLAY", text_color=C_ORANGE, text_center_pos=((WIN_WIDTH / 2), 200 + 25))
 
             # comandos
